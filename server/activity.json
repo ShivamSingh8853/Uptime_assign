@@ -1,0 +1,47 @@
+{
+    "2022": {
+      "total_contributions": 412,
+      "active_days": 245,
+      "top_repositories": [
+        "UptimeAI/uptime_webapp",
+        "UptimeAI/uptime_server",
+        "UptimeAI/uptime_ml",
+        "UptimeAI/data_pipeline",
+        "UptimeAI/monitoring_sdk"
+      ]
+    },
+    "2023": {
+      "total_contributions": 527,
+      "active_days": 263,
+      "top_repositories": [
+        "UptimeAI/uptime_server",
+        "UptimeAI/uptime_webapp",
+        "UptimeAI/uptime_ai_dashboard",
+        "UptimeAI/uptime_admin",
+        "UptimeAI/uptime_docs"
+      ]
+    },
+    "2024": {
+      "total_contributions": 681,
+      "active_days": 284,
+      "top_repositories": [
+        "UptimeAI/uptime_ml",
+        "UptimeAI/uptime_webapp",
+        "UptimeAI/uptime_server",
+        "UptimeAI/realtime_monitor",
+        "UptimeAI/model_tuning"
+      ]
+    },
+    "2025": {
+      "total_contributions": 310,
+      "active_days": 111,
+      "top_repositories": [
+        "UptimeAI/uptime_webapp",
+        "UptimeAI/uptime_ml",
+        "UptimeAI/uptime_notifications",
+        "UptimeAI/uptime_api_gateway",
+        "UptimeAI/uptime_devops"
+      ]
+    }
+  }
+  

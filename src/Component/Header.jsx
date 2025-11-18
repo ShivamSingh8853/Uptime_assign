@@ -12,7 +12,7 @@ const Header = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("/user.json")
+    fetch("http://localhost:5000/api/user")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
