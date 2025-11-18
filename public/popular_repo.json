@@ -1,0 +1,77 @@
+[
+    {
+      "name": "Memories-Social-Media",
+      "description": "A full-stack MERN social media app with authentication, posts, likes, and image upload.",
+      "language": "JavaScript",
+      "stars": 21,
+      "forks": 7,
+      "updated_at": "2025-01-10T10:32:00Z",
+      "repo_url": "https://github.com/ShivamSingh8853/Memories-Social-Media",
+      "forked_from": null,
+      "public": true
+    },
+    {
+      "name": "invoice_extractor",
+      "description": "AI-powered invoice extraction tool using OCR (Tesseract) and FastAPI.",
+      "language": "Python",
+      "stars": 14,
+      "forks": 3,
+      "updated_at": "2024-12-28T14:15:00Z",
+      "repo_url": "https://github.com/ShivamSingh8853/invoice_extractor",
+      "forked_from": {
+        "owner": "open-mmlab",
+        "repo": "invoice-ocr-base",
+        "url": "https://github.com/open-mmlab/invoice-ocr-base"
+      },
+      "public": true
+    },
+    {
+      "name": "go-event-driven",
+      "description": "Event-driven microservices built using Go, Kafka, and Docker.",
+      "language": "Go",
+      "stars": 9,
+      "forks": 2,
+      "updated_at": "2024-11-15T09:47:00Z",
+      "repo_url": "https://github.com/ShivamSingh8853/go-event-driven",
+      "forked_from": null,
+      "public": true
+    },
+    {
+      "name": "Urban-Reach",
+      "description": "Agriculture e-commerce platform built using the MERN stack.",
+      "language": "JavaScript",
+      "stars": 18,
+      "forks": 5,
+      "updated_at": "2024-10-05T16:21:00Z",
+      "repo_url": "https://github.com/ShivamSingh8853/Urban-Reach",
+      "forked_from": {
+        "owner": "agri-tech-labs",
+        "repo": "agri-smart-base",
+        "url": "https://github.com/agri-tech-labs/agri-smart-base"
+      },
+      "public": true
+    },
+    {
+      "name": "We-Amigos",
+      "description": "Real-time chat application using React, NodeJS, and Socket.io.",
+      "language": "JavaScript",
+      "stars": 11,
+      "forks": 4,
+      "updated_at": "2024-09-19T12:44:00Z",
+      "repo_url": "https://github.com/ShivamSingh8853/We-Amigos",
+      "forked_from": null,
+      "public": true
+    },
+    {
+      "name": "portfolio-website",
+      "description": "A personal portfolio website built using React and Tailwind CSS.",
+      "language": "JavaScript",
+      "stars": 6,
+      "forks": 1,
+      "updated_at": "2024-08-12T11:18:00Z",
+      "repo_url": "https://github.com/ShivamSingh8853/portfolio-website",
+      "forked_from": null,
+      "public": true
+    }
+  ]
+  
