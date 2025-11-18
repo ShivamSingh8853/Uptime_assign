@@ -12,33 +12,34 @@ import Footer from "./Component/Footer";
 function App() {
   return (
     <Router>
+      <div className="flex flex-col min-h-screen">
 
-      <div className="w-full bg-[#f6f8fa] border-b">
-        <Header />
-        <ResponsiveTabs />
+        <div className="w-full bg-[#f6f8fa] border-b">
+          <Header />
+          <ResponsiveTabs />
+        </div>
+
+        <div className="flex-1 w-full flex flex-col lg:flex-row">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="flex flex-col lg:flex-row w-full">
+                  <User />
+                  <PopularRepo />
+                </div>
+              }
+            />
+            <Route path="/repositories" element={<Repositories />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/stars" element={<Stars />} />
+          </Routes>
+        </div>
+
+
+        <Footer />
       </div>
-
-
-      <div className="w-full flex">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="flex w-full">
-                <User />
-                <PopularRepo />
-              </div>
-            }
-          />
-          <Route path="/repositories" element={<Repositories />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/packages" element={<Packages />} />
-          <Route path="/stars" element={<Stars />} />
-        </Routes>
-      </div>
-
-
-      <Footer />
     </Router>
   );
 }

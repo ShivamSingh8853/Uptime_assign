@@ -25,19 +25,26 @@ const ResponsiveTabs = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleResize = () => {
-    const containerWidth = rowRef.current?.offsetWidth || 0;
 
-    let consumedWidth = 0;
-    const tempVisible = [];
-    const tempHidden = [];
+  const recalcTabs = () => {
+    if (!rowRef.current) return;
 
-    const TAB_WIDTH = 130;
+    const containerWidth = rowRef.current.offsetWidth - 60;
+    let usedWidth = 0;
 
-    tabs.forEach((tab) => {
-      if (consumedWidth + TAB_WIDTH < containerWidth - 70) {
+    let tempVisible = [];
+    let tempHidden = [];
+
+    const childWidths = Array.from(rowRef.current.children)
+      .filter((c) => !c.dataset.menu) 
+      .map((c) => c.offsetWidth + 16); 
+
+    tabs.forEach((tab, i) => {
+      const w = childWidths[i] || 130;
+
+      if (usedWidth + w < containerWidth) {
         tempVisible.push(tab);
-        consumedWidth += TAB_WIDTH;
+        usedWidth += w;
       } else {
         tempHidden.push(tab);
       }
@@ -48,10 +55,20 @@ const ResponsiveTabs = () => {
   };
 
   useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (!rowRef.current) return;
+
+    const resizeObserver = new ResizeObserver(recalcTabs);
+    resizeObserver.observe(rowRef.current);
+
+    window.addEventListener("resize", recalcTabs);
+    recalcTabs();
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", recalcTabs);
+    };
   }, []);
+
 
   useEffect(() => {
     const handler = (e) => {
@@ -65,8 +82,10 @@ const ResponsiveTabs = () => {
   }, []);
 
   return (
-    <div>
-      <div ref={rowRef} className="flex items-center gap-6 px-6">
+    <div className="border-b bg-[#f6f8fa]">
+      <div ref={rowRef} className="flex items-center gap-4 px-6 overflow-hidden">
+
+
         {visibleTabs.map((tab) => (
           <button
             key={tab.id}
@@ -74,7 +93,7 @@ const ResponsiveTabs = () => {
               setActiveTab(tab.id);
               navigate(tab.path);
             }}
-            className="py-3 flex items-center gap-2 text-sm relative"
+            className={`py-3 flex items-center gap-2 text-sm relative whitespace-nowrap`}
           >
             {tab.icon}
             {tab.label}
@@ -86,15 +105,17 @@ const ResponsiveTabs = () => {
             )}
 
             {activeTab === tab.id && (
-              <span className="absolute left-0 right-0 -bottom-1 h-[2px] bg-red-500 rounded-full"></span>
+              <span className="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-red-500 rounded-full"></span>
             )}
           </button>
         ))}
 
+
         {hiddenTabs.length > 0 && (
           <div className="relative" ref={dropdownRef}>
             <button
-              onClick={() => setMenuOpen((prev) => !prev)}
+              data-menu
+              onClick={() => setMenuOpen(!menuOpen)}
               className="p-2 border border-gray-300 rounded-md hover:bg-gray-200"
             >
               <BsThreeDots size={20} />

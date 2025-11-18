@@ -20,25 +20,25 @@ const User = () => {
   return (
     <div className="ml-20 mt-10 px-3 w-[300px]">
 
-      {/* Avatar */}
+
       <img
         src={user.avatar_url}
         alt="user avatar"
         className="rounded-full w-full h-auto border"
       />
 
-      {/* Name */}
+
       <div className="font-bold text-xl mt-3">{user.name}</div>
 
-      {/* Username */}
+
       <div className="text-gray-500">{user.login}</div>
 
-      {/* Bio */}
+
       <div className="text-sm font-semibold text-gray-600 py-3">
         {user.bio}
       </div>
 
-      {/* Edit Profile */}
+
       <span
         className="w-full bg-gray-100 border px-3 py-2 rounded-md 
                    hover:bg-gray-200 cursor-pointer font-bold 
@@ -47,7 +47,7 @@ const User = () => {
         Edit Profile
       </span>
 
-      {/* Followers / Following */}
+
       <div className="flex items-center gap-2 py-3 text-sm">
         <FaUserFriends size={16} />
         <span className="font-bold">{user.followers}</span>
@@ -59,7 +59,7 @@ const User = () => {
         <span className="text-gray-600">following</span>
       </div>
 
-      {/* Company */}
+
       {user.company && (
         <div className="flex items-center gap-2 py-1 text-sm text-gray-700">
           <GoOrganization size={16} />
@@ -67,7 +67,7 @@ const User = () => {
         </div>
       )}
 
-      {/* Location */}
+
       {user.location && (
         <div className="flex items-center gap-2 py-1 text-sm text-gray-700">
           <IoLocationOutline size={16} />
@@ -75,7 +75,7 @@ const User = () => {
         </div>
       )}
 
-      {/* Email */}
+
       {user.email && (
         <div className="flex items-center gap-2 py-1 text-sm text-gray-700">
           <MdOutlineMailOutline size={18} />
@@ -83,7 +83,7 @@ const User = () => {
         </div>
       )}
 
-      {/* Blog / Website */}
+
       {user.blog && (
         <div className="flex items-center gap-2 py-1 text-sm text-blue-600 hover:underline cursor-pointer">
           <IoIosLink size={16} />

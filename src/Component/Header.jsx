@@ -21,7 +21,7 @@ const Header = () => {
     <div className="w-full bg-[#f6f8fa]">
       <div className="w-full px-4 py-3 flex items-center justify-between">
 
-        {/* LEFT SIDE */}
+
         <div className="flex items-center gap-4">
           <button className="p-2 border rounded-md">
             <FiMenu size={20} />
@@ -34,10 +34,10 @@ const Header = () => {
           </span>
         </div>
 
-        {/* RIGHT SIDE */}
+
         <div className="flex items-center gap-3">
 
-          {/* Search Bar */}
+
           <div className="hidden md:flex items-center border rounded-md px-3 py-1 gap-2 w-72 bg-white">
             <CiSearch size={20} />
             <input
@@ -51,7 +51,7 @@ const Header = () => {
             <CiSearch size={20} />
           </div>
 
-          {/* Icons */}
+
           <div className="flex items-center gap-2">
             <div className="p-2 border rounded-md"><TbBrandGithubCopilot size={20} /></div>
 
@@ -66,7 +66,7 @@ const Header = () => {
             <div className="p-2 border rounded-md"><IoGitPullRequestOutline size={20} /></div>
           </div>
 
-          {/* Profile Pic */}
+
           <img
             src={user == null ? '' : user.avatar_url}
             alt="profile"
