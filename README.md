@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+This is a GitHub-inspired front-end application built with **React**, **Tailwind CSS**, and **React Router**, featuring a contributions calendar, popular repositories, user info, and responsive layout.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive layout similar to GitHub homepage
+- User profile display
+- Popular repositories section
+- Contributions calendar with month-wise activity
+- Responsive tabs (Overview, Repositories, Projects, Packages, Stars)
+- Footer with links
+- API endpoints served via a local Express server for contributions and activity data
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) v16 or higher
+- npm or yarn
+- Git (optional, for cloning the repo)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### 1. Clone the repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/your-username/github-clone.git
+cd github-clone
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Install Dependencies
+# Using npm
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Or using yarn
+yarn install
 
-### `npm run eject`
+## Start the backend server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+cd server
+npm install
+node index.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Start the React Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd ..
+npm start
 
-## Learn More
+## FIle Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+/server          # Express backend serving JSON data
+/src
+  /Component     # Reusable components (Header, Footer, User, Tabs, Contributions)
+  /pages         # Pages for Repositories, Projects, Packages, Stars
+  App.js         # Main application
+  index.js       # React entry point
+/public
+  popular_repo.json
+  data.json
+  activity.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GET /api/contributions → Returns year-wise contributions
+GET /api/activity/:year → Returns activity overview for a given year
+GET /api/user → Returns user information
