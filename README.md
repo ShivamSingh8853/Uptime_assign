@@ -68,3 +68,8 @@ npm start
 GET /api/contributions → Returns year-wise contributions
 GET /api/activity/:year → Returns activity overview for a given year
 GET /api/user → Returns user information
+
+Evidence:
+
+<img width="1470" height="956" alt="Screenshot 2025-11-18 at 6 28 52 PM" src="https://github.com/user-attachments/assets/9dfa8a76-ff69-4448-9f10-b5eee8c181b1" />
+<img width="1470" height="956" alt="Screenshot 2025-11-18 at 3 57 51 PM" src="https://github.com/user-attachments/assets/6040c3f4-1730-4b1f-b71c-83872e5fc852" />
