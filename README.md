@@ -26,7 +26,6 @@ This is a GitHub-inspired front-end application built with **React**, **Tailwind
 
 ### 1. Clone the repository
 
-```bash
 git clone https://github.com/your-username/github-clone.git
 cd github-clone
 
