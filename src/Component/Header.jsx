@@ -8,11 +8,12 @@ import { VscIssues } from "react-icons/vsc";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { IoGitPullRequestOutline } from "react-icons/io5";
 
+const BASE_URL = "https://uptime-assign-1.onrender.com";
 const Header = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/user")
+    fetch(`${BASE_URL}/api/user`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);

@@ -10,10 +10,11 @@ const Contributions = () => {
   const [user, setUser] = useState(null);
 
   const [visibleMonths, setVisibleMonths] = useState([]);
-
+  
+  const BASE_URL = "https://uptime-assign-1.onrender.com";
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/contributions")
+    fetch(`${BASE_URL}/api/contributions`)
       .then((res) => res.json())
       .then((json) => {
         setData(json);
@@ -33,14 +34,14 @@ const Contributions = () => {
 
   useEffect(() => {
     if (!selectedYear) return;
-    fetch(`http://localhost:5000/api/activity/${selectedYear}`)
+    fetch(`${BASE_URL}/api/activity/${selectedYear}`)
       .then((res) => res.json())
       .then((data) => setActivity(data));
   }, [selectedYear]);
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/user")
+    fetch(`${BASE_URL}/api/user`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);

@@ -4,12 +4,13 @@ import { GoOrganization } from "react-icons/go";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoIosLink } from "react-icons/io";
+const BASE_URL = "https://uptime-assign-1.onrender.com";
 
 const User = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/user")
+    fetch(`${BASE_URL}/api/user`)
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
